@@ -98,7 +98,7 @@ export default function AppBar() {
   return (
     <div className="app">
       <nav
-        className={`w-full fixed z-50 bg-[#093e07] transition-all duration-300 ${
+        className={`w-full fixed z-50 bg-[#37003C] transition-all duration-300 ${
           scrolled ? "top-0" : "top-14"
         }`}
       >
