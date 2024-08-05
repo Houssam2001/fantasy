@@ -40,8 +40,8 @@ export default function Login() {
         onSubmit={handleSubmit}
         className="flex w-full justify-center flex-row gap-4 items-center"
       >
-        <h1 className="text-2xl font-bold mb-4 mx-7 text-center text-[#37003C]">
-          Sign In{" "}
+        <h1 className="text-xl font-bold mb-4 mx-5 text-center text-[#37003C]">
+          SignIn{" "}
         </h1>
         <div className="flex items-center z-40 ">
           <div className="mb-5">
@@ -95,7 +95,7 @@ export default function Login() {
           type="submit"
           className="bg-gradient-to-r text-black dark:text-gray-300 from-[#00FE8E] to-[#02EFFB] shadow-lg px-28 py-5  text-sm font-bold rounded-sm  hover:scale-105 hover:from-purple-500 hover:to-blue-500 transition duration-300 ease-in-out"
         >
-          Sign In
+          SignIn
         </button>
         <h1 className="text-lg font-bold mb-4  text-center text-[#37003C]">
           Forgot your password?{" "}
