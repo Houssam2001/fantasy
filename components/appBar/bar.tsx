@@ -1,13 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Bars3Icon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import {  Bars3Icon, ChevronDownIcon, MoonIcon,  SunIcon } from "@heroicons/react/24/outline";
+
 
 const MenuItem = ({ href, children, isActive }: any) => (
   <li>
     <a
       href={href}
-      className={`block py-2 px-3 rounded ${
+      className={`block py-1 px-3 rounded ${
         isActive
           ? " md:text-blue-700 md:dark:text-blue-500"
           : "hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:hover:bg-gray-700 md:dark:hover:text-blue-500"
@@ -40,16 +41,19 @@ const DropdownMenu = ({ title, items }: any) => {
       onMouseEnter={showDropdown}
       onMouseLeave={hideDropdown}
     >
-      <a href="#" className="block px-3 rounded">
-        {title}
+      <a href="#" className="block px-3 rounded  ">
+        <div className="flex flex-row ">
+
+        {title} <ChevronDownIcon  className="h-5 w-5  ml-1 mt-1" />
+        </div>
       </a>
       {isOpen && (
-        <div className="absolute left-0 z-50 w-60 mt-8 bg-green-700 px-4 text-gray-800 shadow-xl">
+        <div className="absolute left-0 z-50 w-72 mt-4 bg-[#c61ed5] px-4 pb-3 pt-2 text-gray-800 shadow-xl">
           <div className="grid grid-cols-2 gap-2">
             {items.map((item: any, index: any) => (
               <a
                 key={index}
-                className="block py-3 px-3  border-gray-100 font-bold text-sm hover:underline text-white "
+                className="block py-1 px-6  border-gray-100 font-sans text-sm hover:underline text-white "
                 href="#"
               >
                 {item}
@@ -94,21 +98,47 @@ export default function AppBar() {
     "Awards",
     "Pre-season friendlies",
   ];
-  const fantasyItems = [
-    "Home",
-    "Fixtures",
-    "Results",
-    "Tables",
-    "Transfers",
-    "Stats",
-    "News",
-    "Video",
-    "Watch Live",
+  const fantasyItems = ["Fantasy", "Fantasy Challenge", "Fantasy Draft"];
+  const footItems = [
+    " Wider Football",
+    "PL Charitable Fund",
+    "Community",
+    "Youth Development",
+    "No Room for Racism",
+    "Inside Matters",
+    "Poppy",
+    "Rainbow Laces",
+    "More than a game",
+  ];
+  const abouItems = [
+    "Overview",
+    "Governance",
+    "What we do",
+    "Inclusion",
+    "Statement of Principles",
+    "Publications",
+    "Partners",
+    "Legal",
+    "Careers",
+    "Safeguarding",
+    "Gender Pay Gap Report",
+    "Media"
+  ];
+  const moreItems = [
+    "History",
+    "Fan Team of the Season",
+    "Hall of Fame",
+    "Referees",
+    "PL30",
+    "Man of the Match",
+    "Managers",
+    "ePremier League",
+    "FAQs",
+    "Nike Ball Hub",
     "Tickets",
-    "Clubs",
-    "Players",
-    "Awards",
-    "Pre-season friendlies",
+    "Contact Us",
+    "Mornings Live",
+    "Summer Series",
   ];
 
   return (
@@ -136,16 +166,16 @@ export default function AppBar() {
         </div>
         <div className="max-w-7xl mx-auto">
           <div className="flex mx-auto justify-between w-5/6">
-            <div className="flex items-center gap-16 my-8">
+            <div className="flex items-center gap-16 my-4">
               <div className="hidden font-bold text-white text-xl lg:flex gap-8 ml-12">
                 <DropdownMenu title={"BotolaPro"} items={menuItems} />
                 <DropdownMenu title={"Fantasy"} items={fantasyItems} />
                 <DropdownMenu
                   title={"Football and community"}
-                  items={menuItems}
+                  items={footItems}
                 />
-                <DropdownMenu title={"About"} items={menuItems} />
-                <DropdownMenu title={"More"} items={menuItems} />
+                <DropdownMenu title={"About"} items={abouItems} />
+                <DropdownMenu title={"More"} items={moreItems} />
               </div>
             </div>
             <div className="flex gap-6">

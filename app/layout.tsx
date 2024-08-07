@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import AppBar from "@/components/appBar/bar";
 import BannerTop from "@/components/banner/bannerTop";
+import Footer from "@/components/footer/Footer";
+import Sponsors from "@/components/footer/sponsors";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +28,8 @@ export default function RootLayout({
 
         {children}
         </div>
+        <Sponsors/>
+        <Footer/>
         </body>
     </html>
   );
