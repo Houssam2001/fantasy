@@ -8,6 +8,7 @@ import {
   LockClosedIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
+import Card1 from "@/components/cards/card1";
 
 export default function Login() {
   const router = useRouter();
@@ -242,7 +243,7 @@ export default function Login() {
               <div className="text-center lg:text-left ">
                 <div className="mb-10 lg:mb-0 ">
                   <h1 className="mt-0 mb-3 text-3xl font-bold leading-tight sm:text-4xl sm:leading-tight md:text-[40px] md:leading-tight text-white ">
-                  Register to Play Fantasy El Botola Pro
+                    Register to Play Fantasy El Botola Pro
                   </h1>
                   <p className="w-full text-base font-medium leading-relaxed sm:text-lg sm:leading-relaxed text-white"></p>
                 </div>
@@ -252,7 +253,7 @@ export default function Login() {
               <div className="text-center lg:text-right">
                 <a
                   className="font-semibold rounded-lg mx-auto inline-flex items-center justify-center bg-white py-4 px-9 hover:bg-opacity-90"
-                  href="#"
+                  href="/signup"
                 >
                   Sign Up Now
                 </a>
@@ -469,6 +470,22 @@ export default function Login() {
           </svg>
         </span>
       </section>
+      <div className="flex flex-row items-center gap-4 my-12">
+        <Card1
+          title={"Pick Your Squad"}
+          image={
+            "https://fantasy.premierleague.com/static/media/home-step-1-1-684.ac53266f.png"
+          }
+          description="Use your budget of £100m to pick a squad of 15 players from the Premier League."
+        />
+        <Card1
+          title={"Create and Join Leagues"}
+          image={
+            "https://fantasy.premierleague.com/static/media/home-step-2-684.e76c9c8c.png"
+          }
+          description="Play against friends and family, colleagues or a web community in invitational leagues and cups."
+        />
+      </div>
     </div>
   );
 }

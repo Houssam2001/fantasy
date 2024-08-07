@@ -51,12 +51,15 @@ export default function Home() {
         <div className="w-full relative">
           {/* Background image container */}
           <div
-            className="w-full h-[300px] bg-current bg-center"
+            className="w-full  h-[180px] bg-current bg-center"
             style={{
               backgroundImage: `url('/images/image.png')`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
             }}
           >
-            <div className="absolute inset-y-60 pt-2 z-10 ">
+            <div className="absolute inset-y-28 pt-4 z-10 ">
               <TabMenu activeTab={activeTab} handleTabClick={handleTabClick} />
             </div>
             {/* Optional overlay */}

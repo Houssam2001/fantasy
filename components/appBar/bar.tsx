@@ -94,6 +94,22 @@ export default function AppBar() {
     "Awards",
     "Pre-season friendlies",
   ];
+  const fantasyItems = [
+    "Home",
+    "Fixtures",
+    "Results",
+    "Tables",
+    "Transfers",
+    "Stats",
+    "News",
+    "Video",
+    "Watch Live",
+    "Tickets",
+    "Clubs",
+    "Players",
+    "Awards",
+    "Pre-season friendlies",
+  ];
 
   return (
     <div className="app">
@@ -123,7 +139,7 @@ export default function AppBar() {
             <div className="flex items-center gap-16 my-8">
               <div className="hidden font-bold text-white text-xl lg:flex gap-8 ml-12">
                 <DropdownMenu title={"BotolaPro"} items={menuItems} />
-                <DropdownMenu title={"Fantasy"} items={menuItems} />
+                <DropdownMenu title={"Fantasy"} items={fantasyItems} />
                 <DropdownMenu
                   title={"Football and community"}
                   items={menuItems}
