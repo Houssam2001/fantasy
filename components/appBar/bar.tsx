@@ -48,7 +48,7 @@ const DropdownMenu = ({ title, items }: any) => {
         </div>
       </a>
       {isOpen && (
-        <div className="absolute left-0 z-50 w-72 mt-4 bg-[#c61ed5] px-4 pb-3 pt-2 text-gray-800 shadow-xl">
+        <div className="absolute left-0 z-50 w-72 mt-4 bg-[#963CFF] px-4 pb-3 pt-2 text-gray-800 shadow-xl">
           <div className="grid grid-cols-2 gap-2">
             {items.map((item: any, index: any) => (
               <a

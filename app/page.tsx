@@ -2,6 +2,8 @@
 import AppBar from "@/components/appBar/bar";
 import Login from "@/components/auth/login/login";
 import BannerTop from "@/components/banner/bannerTop";
+import SquadSelection from "@/components/squadSelection/squad";
+import Prizes from "@/components/tabmenu/menus/prizes";
 import TabMenu from "@/components/tabmenu/tabMenu";
 import { useState } from "react";
 
@@ -17,11 +19,16 @@ export default function Home() {
     { id: 5, label: "Statistics", disabled: false },
     { id: 6, label: "FPL Challenge", disabled: false },
   ];
+  const tabsLogged = [
+    { id: 0, label: "Home" },
+    { id: 1, label: "Squad Selection" },
+    { id: 2, label: "Help" },
+    { id: 6, label: "Sign Out",},
+  ];
 
   const handleTabClick = (id: number) => {
-    if (!tabs[id].disabled) {
       setActiveTab(id);
-    }
+    
   };
 
   const renderTabContent = () => {
@@ -29,7 +36,7 @@ export default function Home() {
       case 0:
         return <div ><Login/></div>;
       case 1:
-        return <div>Discover amazing prizes here!</div>;
+        return <div><SquadSelection/></div>;
       case 2:
         return <div>Scout the best players with our tools.</div>;
       case 3:
@@ -40,6 +47,18 @@ export default function Home() {
         return <div>View detailed statistics on your performance.</div>;
       case 6:
         return <div>Join the FPL Challenge and compete!</div>;
+      default:
+        return null;
+    }
+  };
+  const renderTabContentLogged = () => {
+    switch (activeTab) {
+      case 0:
+        return <div ><Login/></div>;
+      case 1:
+        return <div><Prizes/></div>;
+      case 2:
+        return <div>Scout the best players with our tools.</div>;
       default:
         return null;
     }

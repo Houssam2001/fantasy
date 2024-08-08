@@ -1,12 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-// import { signIn } from "next-auth/react";
 import {
   EyeIcon,
-  //   EyeOffIcon,
-  LockClosedIcon,
-  UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import Card1 from "@/components/cards/card1";
 
@@ -101,16 +97,12 @@ export default function Login() {
           Forgot your password?{" "}
         </h1>
       </form>
-      <div className="relative py-4">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-b border-gray-300"></div>
-        </div>
-        <div className="relative flex justify-center">
-          <span className="bg-white px-4 text-sm text-gray-500">
-            or login with
-          </span>
-        </div>
+      <div className="my-9 bg-gradient-to-r from-teal-500 to-indigo-600 h-2 mx-4 w-3/4 flex items-center justify-center">
+        <span className="bg-[#DFE3E4] px-4 text-sm text-gray-500 ">
+          or login with
+        </span>
       </div>
+
       <div className="flex flex-row items-center gap-4 mt-2">
         <button className="flex items-center bg-white border border-gray-300 rounded-lg shadow-md max-w-xs px-10 py-3 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
           <svg
