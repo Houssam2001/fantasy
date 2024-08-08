@@ -10,8 +10,8 @@ const MainContent = ({ onCardClick, selectedPlayers }: any) => {
           Squad Selection
         </h1>
         <h3 className="text-gray-700">
-          Select a maximum of 3 players from a single team or 'Auto Pick' if
-          you're short of time.
+          Select a maximum of 3 players from a single team or &apos;Auto Pick&apos; if
+          you&apos;re short of time.
         </h3>
       </div>
       <div className="bg-gradient-to-bl from-indigo-700 to-cyan-200">
